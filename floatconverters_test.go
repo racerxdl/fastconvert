@@ -12,7 +12,7 @@ func TestBinaryReadFloat32(b *testing.T) {
 	var bs = new(bytes.Buffer)
 
 	for i := 0; i < len(vecA); i++ {
-		vecA[i] = rand.Float32()*2-1
+		vecA[i] = rand.Float32()*2 - 1
 	}
 
 	err := binary.Write(bs, binary.LittleEndian, vecA)
@@ -39,7 +39,7 @@ func TestBinaryReadFloat64(b *testing.T) {
 	var bs = new(bytes.Buffer)
 
 	for i := 0; i < len(vecA); i++ {
-		vecA[i] = rand.Float64()*2-1
+		vecA[i] = rand.Float64()*2 - 1
 	}
 
 	err := binary.Write(bs, binary.LittleEndian, vecA)

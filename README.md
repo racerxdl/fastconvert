@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/racerxdl/fastconvert.svg?branch=master)](https://travis-ci.org/racerxdl/fastconvert) [![Apache License](https://img.shields.io/badge/license-Apache-blue.svg)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)) [![Go Report](https://goreportcard.com/badge/github.com/racerxdl/limedrv)](https://goreportcard.com/report/github.com/racerxdl/fastconvert)
+
 # FastConvert
 
 FastConvert is a library to be able to convert byte arrays to typed arrays in a faster way than `binary.Read`.

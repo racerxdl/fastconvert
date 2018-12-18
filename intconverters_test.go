@@ -114,6 +114,7 @@ func TestBinaryReadUInt16BE(b *testing.T) {
 		}
 	}
 }
+
 // endregion
 // region 32 bit
 func TestBinaryReadInt32LE(b *testing.T) {
@@ -222,6 +223,7 @@ func TestBinaryReadUInt32BE(b *testing.T) {
 		}
 	}
 }
+
 // endregion
 // region 64 bit
 func TestBinaryReadInt64LE(b *testing.T) {
@@ -330,4 +332,5 @@ func TestBinaryReadUInt64BE(b *testing.T) {
 		}
 	}
 }
+
 // endregion

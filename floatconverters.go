@@ -1,6 +1,5 @@
 package fastconvert
 
-
 import (
 	"encoding/binary"
 	"math"
@@ -23,14 +22,14 @@ func ReadByteArrayToFloat32Array(data []byte, out []float32) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = ReadByteArrayToFloat32(data[pos:pos+4])
+		out[idx] = ReadByteArrayToFloat32(data[pos : pos+4])
 		pos += 4
 	}
 }
 
 // ByteArrayToFloat32Array reads a float32 array from specified byte buffer.
 func ByteArrayToFloat32Array(data []byte) []float32 {
-	var out = make([]float32, len(data) / 4)
+	var out = make([]float32, len(data)/4)
 	ReadByteArrayToFloat32Array(data, out)
 	return out
 }
@@ -53,16 +52,16 @@ func ReadByteArrayToFloat64Array(data []byte, out []float64) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = ReadByteArrayToFloat64(data[pos:pos+8])
+		out[idx] = ReadByteArrayToFloat64(data[pos : pos+8])
 		pos += 8
 	}
 }
 
 // ByteArrayToFloat64Array reads a float64 array from specified byte buffer.
 func ByteArrayToFloat64Array(data []byte) []float64 {
-	var out = make([]float64, len(data) / 8)
+	var out = make([]float64, len(data)/8)
 	ReadByteArrayToFloat64Array(data, out)
 	return out
 }
-// endregion
 
+// endregion

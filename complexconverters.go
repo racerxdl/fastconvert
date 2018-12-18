@@ -19,8 +19,8 @@ func ReadByteArrayToComplex64Array(data []byte, out []complex64) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		var r = ReadByteArrayToFloat32(data[pos:pos+4])
-		var i = ReadByteArrayToFloat32(data[pos+4:pos+8])
+		var r = ReadByteArrayToFloat32(data[pos : pos+4])
+		var i = ReadByteArrayToFloat32(data[pos+4 : pos+8])
 		out[idx] = complex(r, i)
 		pos += 8
 	}
@@ -28,10 +28,11 @@ func ReadByteArrayToComplex64Array(data []byte, out []complex64) {
 
 // ByteArrayToComplex64Array reads a complex64 array from specified byte buffer.
 func ByteArrayToComplex64Array(data []byte) []complex64 {
-	var out = make([]complex64, len(data) / 8)
+	var out = make([]complex64, len(data)/8)
 	ReadByteArrayToComplex64Array(data, out)
 	return out
 }
+
 // endregion
 // region Complex128 Converters
 // ReadByteArrayToComplex128 reads a 16 byte array to a complex128
@@ -52,8 +53,8 @@ func ReadByteArrayToComplex128Array(data []byte, out []complex128) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		var r = ReadByteArrayToFloat64(data[pos:pos+8])
-		var i = ReadByteArrayToFloat64(data[pos+8:pos+16])
+		var r = ReadByteArrayToFloat64(data[pos : pos+8])
+		var i = ReadByteArrayToFloat64(data[pos+8 : pos+16])
 		out[idx] = complex(r, i)
 		pos += 16
 	}
@@ -61,8 +62,9 @@ func ReadByteArrayToComplex128Array(data []byte, out []complex128) {
 
 // ByteArrayToComplex128Array reads a complex128 array from specified byte buffer.
 func ByteArrayToComplex128Array(data []byte) []complex128 {
-	var out = make([]complex128, len(data) / 16)
+	var out = make([]complex128, len(data)/16)
 	ReadByteArrayToComplex128Array(data, out)
 	return out
 }
+
 // endregion
