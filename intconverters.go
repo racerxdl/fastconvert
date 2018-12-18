@@ -15,7 +15,7 @@ func ReadByteArrayToInt16LEArray(data []byte, out []int16) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = int16(binary.LittleEndian.Uint16(data[:2]))
+		out[idx] = int16(binary.LittleEndian.Uint16(data[pos:pos+2]))
 		pos += 2
 	}
 }
@@ -37,7 +37,7 @@ func ReadByteArrayToInt16BEArray(data []byte, out []int16) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = int16(binary.BigEndian.Uint16(data[:2]))
+		out[idx] = int16(binary.BigEndian.Uint16(data[pos:pos+2]))
 		pos += 2
 	}
 }
@@ -60,7 +60,7 @@ func ReadByteArrayToUInt16LEArray(data []byte, out []uint16) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = binary.LittleEndian.Uint16(data[:2])
+		out[idx] = binary.LittleEndian.Uint16(data[pos:pos+2])
 		pos += 2
 	}
 }
@@ -82,7 +82,7 @@ func ReadByteArrayToUInt16BEArray(data []byte, out []uint16) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = binary.BigEndian.Uint16(data[:2])
+		out[idx] = binary.BigEndian.Uint16(data[pos:pos+2])
 		pos += 2
 	}
 }
@@ -108,7 +108,7 @@ func ReadByteArrayToInt32LEArray(data []byte, out []int32) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = int32(binary.LittleEndian.Uint32(data[:4]))
+		out[idx] = int32(binary.LittleEndian.Uint32(data[pos:pos+4]))
 		pos += 4
 	}
 }
@@ -130,8 +130,8 @@ func ReadByteArrayToInt32BEArray(data []byte, out []int32) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = int32(binary.BigEndian.Uint32(data[:2]))
-		pos += 2
+		out[idx] = int32(binary.BigEndian.Uint32(data[pos:pos+4]))
+		pos += 4
 	}
 }
 
@@ -153,7 +153,7 @@ func ReadByteArrayToUInt32LEArray(data []byte, out []uint32) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = binary.LittleEndian.Uint32(data[:4])
+		out[idx] = binary.LittleEndian.Uint32(data[pos:pos+4])
 		pos += 4
 	}
 }
@@ -175,7 +175,7 @@ func ReadByteArrayToUInt32BEArray(data []byte, out []uint32) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = binary.BigEndian.Uint32(data[:4])
+		out[idx] = binary.BigEndian.Uint32(data[pos:pos+4])
 		pos += 4
 	}
 }
@@ -201,7 +201,7 @@ func ReadByteArrayToInt64LEArray(data []byte, out []int64) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = int64(binary.LittleEndian.Uint64(data[:8]))
+		out[idx] = int64(binary.LittleEndian.Uint64(data[pos:pos+8]))
 		pos += 8
 	}
 }
@@ -223,7 +223,7 @@ func ReadByteArrayToInt64BEArray(data []byte, out []int64) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = int64(binary.BigEndian.Uint64(data[:8]))
+		out[idx] = int64(binary.BigEndian.Uint64(data[pos:pos+8]))
 		pos += 8
 	}
 }
@@ -246,7 +246,7 @@ func ReadByteArrayToUInt64LEArray(data []byte, out []uint64) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = binary.LittleEndian.Uint64(data[:8])
+		out[idx] = binary.LittleEndian.Uint64(data[pos:pos+8])
 		pos += 8
 	}
 }
@@ -268,7 +268,7 @@ func ReadByteArrayToUInt64BEArray(data []byte, out []uint64) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = binary.BigEndian.Uint64(data[:8])
+		out[idx] = binary.BigEndian.Uint64(data[pos:pos+8])
 		pos += 8
 	}
 }

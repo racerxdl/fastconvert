@@ -19,8 +19,8 @@ func ReadByteArrayToComplex64Array(data []byte, out []complex64) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		var r = ReadByteArrayToFloat32(data[:4])
-		var i = ReadByteArrayToFloat32(data[4:8])
+		var r = ReadByteArrayToFloat32(data[pos:pos+4])
+		var i = ReadByteArrayToFloat32(data[pos+4:pos+8])
 		out[idx] = complex(r, i)
 		pos += 8
 	}
@@ -52,10 +52,10 @@ func ReadByteArrayToComplex128Array(data []byte, out []complex128) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		var r = ReadByteArrayToFloat64(data[:8])
-		var i = ReadByteArrayToFloat64(data[8:16])
+		var r = ReadByteArrayToFloat64(data[pos:pos+8])
+		var i = ReadByteArrayToFloat64(data[pos+8:pos+16])
 		out[idx] = complex(r, i)
-		pos += 8
+		pos += 16
 	}
 }
 

@@ -103,7 +103,7 @@ func BenchmarkBinaryReadInt16(b *testing.B) {
 	var bs = new(bytes.Buffer)
 
 	for i := 0; i < len(vecA); i++ {
-		vecA[i] = int16(rand.Intn(65535) - 32768)
+		vecA[i] = int16(rand.Intn(65535))
 	}
 
 	err := binary.Write(bs, binary.LittleEndian, vecA)

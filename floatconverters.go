@@ -16,21 +16,21 @@ func ReadByteArrayToFloat32(data []byte) float32 {
 // The number of items are len(data) / 4 or len(out). Which one is the lower.
 func ReadByteArrayToFloat32Array(data []byte, out []float32) {
 	var pos = 0
-	var itemsOnBuffer = len(data) / 8
+	var itemsOnBuffer = len(data) / 4
 	var itemsToRead = itemsOnBuffer
 	if len(out) < itemsToRead {
 		itemsToRead = len(out)
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = ReadByteArrayToFloat32(data[:4])
+		out[idx] = ReadByteArrayToFloat32(data[pos:pos+4])
 		pos += 4
 	}
 }
 
 // ByteArrayToFloat32Array reads a float32 array from specified byte buffer.
 func ByteArrayToFloat32Array(data []byte) []float32 {
-	var out = make([]float32, len(data) / 8)
+	var out = make([]float32, len(data) / 4)
 	ReadByteArrayToFloat32Array(data, out)
 	return out
 }
@@ -53,8 +53,8 @@ func ReadByteArrayToFloat64Array(data []byte, out []float64) {
 	}
 
 	for idx := 0; idx < itemsToRead; idx++ {
-		out[idx] = ReadByteArrayToFloat64(data[:4])
-		pos += 4
+		out[idx] = ReadByteArrayToFloat64(data[pos:pos+8])
+		pos += 8
 	}
 }
 
