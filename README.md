@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/racerxdl/fastconvert.svg?branch=master)](https://travis-ci.org/racerxdl/fastconvert) [![Apache License](https://img.shields.io/badge/license-Apache-blue.svg)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)) [![Go Report](https://goreportcard.com/badge/github.com/racerxdl/limedrv)](https://goreportcard.com/report/github.com/racerxdl/fastconvert)
+[![Build Status](https://api.travis-ci.org/racerxdl/fastconvert.svg?branch=master)](https://travis-ci.org/racerxdl/fastconvert) [![Coverage Status](https://coveralls.io/repos/github/racerxdl/fastconvert/badge.svg?branch=master)](https://coveralls.io/github/racerxdl/fastconvert?branch=master) [![Apache License](https://img.shields.io/badge/license-Apache-blue.svg)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)) [![Go Report](https://goreportcard.com/badge/github.com/racerxdl/limedrv)](https://goreportcard.com/report/github.com/racerxdl/fastconvert)
 
 # FastConvert
 
